@@ -1,0 +1,35 @@
+<html>
+    <script>
+function validateForm() {
+    var x = document.forms["Action"]["option"].value;
+    if (x==null || x=="") {
+        alert("Please Choose Action");
+        return false;
+    }
+}
+</script>
+    
+   <body bgcolor="beige">
+         <center>
+      <h1>CS-553 Google App Engine</h1>
+<center> <h5>HOME page </h5> </center>
+	
+    <blockquote>{{ message }}</blockquote>
+	<form action="/" method="get" name="Action" onsubmit="return validateForm()">
+	  <div>
+	  <select name="option" required>
+	    <option value="C">Insert</option>
+	    <option value="R">Find</option>
+	    <option value="L">List Files</option>
+	    <option value="D">Remove</option>
+	    <option value="S">Check</option>
+	    <option value="T">Show Stats</option>
+	    <option value="X">Remove All</option>
+	    <option value="I">Find in File</option>
+	  </select></br></br>
+	  </div>
+      <div><input name="submit" type="submit" value="HOME"></br></br></div>
+       <a href="/">Home </a>
+	</form></center>
+  </body>
+</html>

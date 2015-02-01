@@ -1,0 +1,25 @@
+
+<html>
+    <script>
+    function validateForm() {
+    var x = document.forms["Action"]["fileName"].value;
+    if (x==null || x=="") {
+        alert("Please Enter File Name");
+        return false;
+    }
+}
+    </script>
+   <body bgcolor="beige">
+         <center>
+      <h1>CS-553 Google App Engine</h1>
+<h5>Delete file page </h5>
+	
+   <blockquote>{{ message }}</blockquote>
+ 	<form action="/delete" method="get" name="Action" onsubmit="return validateForm()">
+ 	   <div> File Name: <input type="text" name="fileName" required></br></br></div>
+       <div><input type="submit" name="submit" value="delete"></br></br></div>
+        <a href="/">Home </a>
+ 	</form>
+         </center>
+   </body>
+</html>

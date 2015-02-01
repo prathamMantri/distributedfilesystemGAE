@@ -1,0 +1,24 @@
+<html>
+    <script>
+    function validateForm() {
+    var x = document.forms["Action"]["fileName"].value;
+    if (x==null || x=="") {
+        alert("Please Enter File Name");
+        return false;
+    }
+}
+    </script>
+   <body bgcolor="beige">
+    <center>
+        <h1>CS-553 Google App Engine</h1>
+<center> <h5>READ File page </h5> </center>
+	
+   <blockquote>{{ message }}</blockquote>
+ 	<form action="/read" method="get" name="Action" onsubmit="return validateForm()">
+            <div> File Name: <input type="text" name="fileName" required><br></br></div>
+       <div><input type="submit" name="submit" value="READ"><br></br></div>
+ 	
+          <a href="/">Home </a>
+        </form>
+   </center></body>
+</html>

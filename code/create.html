@@ -1,0 +1,26 @@
+<html>
+    
+    <script>
+function validateForm() {
+    var x = document.forms["Action"]["file"].value;
+    if (x==null || x=="") {
+        alert("Please Choose File");
+        return false;
+    }
+}
+</script>
+    
+  <body bgcolor="beige">
+       <center> <h1>CS-553 Google App Engine</h1> </center>
+       <center> <h5>Upload File page </h5> </center>
+	
+       <form action={{upload_url}} method="post" enctype="multipart/form-data" name="Action" onsubmit="return validateForm()">
+	  <div>
+	  	<center>Upload File: <input type="file" name="file" required></center></br></br>
+	  </div>
+	 <center> <div><input name="submit" type="submit" value="upload"></br></br></div>
+          <a href="/">Home </a></center>
+	</form>
+              
+  </body>
+</html>

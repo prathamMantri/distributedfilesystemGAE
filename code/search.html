@@ -1,0 +1,31 @@
+<html>
+     <script>
+        
+        function validateForm() {
+            var x = document.forms["Action"]["fileName"].value;
+            if (x==null || x=="") {
+                alert("Please Select at least one Checkbox");
+                return false;
+            }
+        }
+        
+    </script>
+    <body bgcolor="beige">
+    <center>
+        <h1>CS-553 Google App Engine</h1>
+       <h5> search page </h5>
+	      
+    <blockquote>{{ message }}</blockquote>
+    {% for file in match_names %}
+	       <blockquote>{{ file }}</blockquote>
+    {% endfor %}
+<br/><br/>
+  	<form action="/search" method="get" name="Action" onsubmit="return validateForm()">
+  	   <div> File Name: <input type="text" name="fileName" required><br/><br/></div>
+  	   <div><input type="checkbox" name="regex" value="regex">use regex<br/><br/></div>
+       <div><input type="submit" name="submit" value="search"><br/><br/></div>
+  	 <a href="/">Home </a>
+        </form>
+    </center></body>
+
+</html>

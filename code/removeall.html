@@ -1,0 +1,27 @@
+<html>
+
+     <script>
+
+        function validateForm() {
+            if ( fromCache.checked == false&& fromDB.checked== false) {
+                alert("Please Select at least one Checkbox");
+                return false;
+            }
+        }
+
+    </script>
+     <body bgcolor="beige">
+    <center>
+        <h1>CS-553 Google App Engine</h1>
+	 <h5>RemoveAll page </h5>
+
+    <blockquote>{{ message }}</blockquote>
+  	<form action="/removeall" method="get" name="Action" onsubmit="return validateForm()">
+  	   <div><input type="checkbox" id="cache" name="fromCache" value="fromCache">From Cache<br/><br/></div>
+       <div><input type="checkbox" id="db" name="fromDB" value="fromDB">From DB and Cache<br/><br/></div>
+       <div><input type="submit" name="submit" value="Removeall"><br/><br/></div>
+
+       <a href="/">Home </a>
+        </form>
+   </center></body>
+</html>

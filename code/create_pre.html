@@ -1,0 +1,26 @@
+<html>
+    <script>
+function validateForm() {
+    var x = document.forms["Action"]["fileName"].value;
+    if (x==null || x=="") {
+        alert("Please Enter File Name");
+        return false;
+    }
+}
+    </script>
+   <body bgcolor="beige">
+        <center>
+      <h1>CS-553 Google App Engine</h1>
+<h5></h5>
+	
+      
+  <blockquote id='message'>{{ message }}</blockquote>
+ 	<form action="/create" method="get" name="Action" onsubmit="return validateForm()">
+ 	   <div> File Name: <input type="text" name="fileName" required></br></br></div>
+ 	   <div><input type="checkbox" name="overwrite" value="overwrite" >Overwrite</br><br></div>
+       <div><input name="submit" type="submit" value="Submit"></br></br></div>
+       <a href="/">Home </a>
+ 	</form>
+  </center>
+   </body>
+</html>
