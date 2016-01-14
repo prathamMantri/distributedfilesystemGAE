@@ -1,7 +1,7 @@
 """
 File-Name - distdb.py
 File-info - contains logic for file storage in Google app engine
-Author    - Nirmal kumar Ravi
+Author    - Nirmal kumar Ravi/ Prathamesh Mantri
 """
 
 """
